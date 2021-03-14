@@ -1,5 +1,5 @@
 noise:
-  enable: false
+  enable: true
   fraction: 0.3
 
   gauss:
