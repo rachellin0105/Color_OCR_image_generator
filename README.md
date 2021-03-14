@@ -62,7 +62,7 @@ In zcswdt/Color_OCR_image_generator, he sorted out about 700 fonts that can be u
 Downloaded Baidu Cloud Link as follows:<br>
  [here1](https://pan.baidu.com/s/1dRp70rEVeauu9rWB7bfGZw). Extraction code:8kzt.   [here2](https://pan.baidu.com/s/1aHkYSxactHm4u5eEiqHDAA). Extraction code:s58p
 
-![example1.jpg](./demo_image/ziti.png)
+![example1.jpg](./demo_img/ziti.png)
 
 # Tools
 * You can use `sentence_filter.py` script to select different modes(contains `filter` and `split` model) to 
