@@ -46,7 +46,7 @@ you can also use `--customize_color` parameters to customize the font color.
     * `--bg_path`: The generated text pictures will use the pictures of this folder as the background.
     * `--fonts_path`: The font used to generate the picture.
     * `--chars_file`: Chars allowed to be appear in generated images.
-    * `--word_false_txt_path`: Txt file generated from [check_font_validate.py](https://github.com/rachellin0105/Single_char_image_generator#tools).
+    * `--word_false_txt_path`: Txt file generated from [check_font_validate.py](https://github.com/rachellin0105/Single_char_image_generator/blob/master/check_font_validate.py).
 * Argument for choice best color
     * `--color_path`: Color font library used to generate text.
     * `--customize_color`: Support font custom color.
