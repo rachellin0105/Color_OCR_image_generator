@@ -209,14 +209,14 @@ if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
 	# base argument
-	parser.add_argument('--output_dir', type=str, default='output', help='Images save dir')
+	parser.add_argument('--output_dir', type=str, default='output', help='path of output directory ')
 
 	parser.add_argument('--num_per_word', type=int, default=1, help="Number of images per word ")
 
-	parser.add_argument('--output_image_size', type=int, default=64, help="Number of images to generate")
+	parser.add_argument('--output_image_size', type=int, default=64, help="size of output image ")
 
 	parser.add_argument('--bg_path', type=str, default='./background',
-						help='The generated text pictures will use the pictures of this folder as the background')
+						help='The generated text pictures will use the pictures of this folder as the background.')
 						
 	parser.add_argument('--fonts_path',type=str, default='./fonts/chinse_jian',
 						help='The font used to generate the picture')
@@ -247,10 +247,7 @@ if __name__ == '__main__':
 					help="Apply left and right motion blur")
 					
 	parser.add_argument('--ud_motion', action='store_true', default=False,
-					help="Apply up and down motion blur")                    
-	
-	parser.add_argument('--apply_perspective_transform', action='store_true', default=False,
-					help="Apply perspective transform")       
+					help="Apply up and down motion blur")                        
 
 	parser.add_argument('--config_file', type=str, default='noise.yaml',
 					help='Set the parameters when rendering images')
