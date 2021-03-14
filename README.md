@@ -6,37 +6,15 @@ And the length and width of the generated picture is indefinite and the number o
 # Getting Started
 ### Dependency
 - This work was tested with python 3.6,and Ubuntu 18.03. You may need to install third-party libraries by follewing commend. <br>
-'''bash
+```bash
  python -m pip install -r requirements.txt
-'''
-
-
+```
 # Examples of generating images
-By default, simply run `python3 OCR_image_generator.py` will generate 30 text images with color channels in `output/` and a labels.txt file in current floder.<br>
-
-## 1.horizontal_text_picture<br>
-![example1.jpg](./output/img_3_0000001.jpg)
-![example2.jpg](./output/img_3_0000002.jpg)
-![example3.jpg](./output/img_3_0000003.jpg)
-
-![example4.jpg](./output/img_3_0000004.jpg)
-
-![example3.jpg](./output/img_3_0000005.jpg) 
-![example4.jpg](./output/img_3_0000006.jpg) 
-
-![example3.jpg](./output/img_3_0000007.jpg) 
-![example4.jpg](./output/img_3_0000008.jpg)
-
-## 2.get_vertical_text_picture<br>
-
-![example3.jpg](./demo_image/v-1.jpg)
-![example4.jpg](./demo_image/v_2.jpg)
-
-![example3.jpg](./demo_image/v-3.jpg)
-![example4.jpg](./demo_image/v7.jpg)
-
-![example3.jpg](./demo_image/v4.jpg)
-![example4.jpg](./demo_image/v8.jpg)
+By default, simply run `python OCR_image_generator_single_ch.py` will generate a text images per word with color channels in `output/` and a labels.txt file in current floder.<br>
+## single_text_image<br>
+![example1.jpg](./output/img_0000000.jpg)
+![example2.jpg](./output/img_0000001.jpg)
+![example3.jpg](./output/img_0000002.jpg)
 
 # Code function display
 ## Running this code to add different parameters can generate text images with different effects, as follows:
