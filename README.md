@@ -38,35 +38,37 @@ Of course, if you know in advance what kind of font color you need, you need to 
 you can also use `--customize_color` parameters to customize the font color.
 
 ## Arguments
-* base argument
-- `--num_img`: Number of images to generate.
-* `--font_min_size`: Can help adjust the size of the generated text and the size of the picture.
-* `--font_max_size`: Can help adjust the size of the generated text and the size of the picture.
-* `--bg_path`: The generated text pictures will use the pictures of this folder as the background.
-* `--fonts_path`: he font used to generate the picture.
-* `--corpus_path`: The corpus used to generate the text picture.
-* `--color_path`: Color font library used to generate text.
-* `--chars_file`: Chars allowed to be appear in generated images.
-* `--customize_color`: Support font custom color.
-* `--blur`: Apply gauss blur to the generated image.
-* `--prydown`: Blurred image, simulating the effect of enlargement of small pictures.
-* `--lr_motion`: Apply left and right motion blur.
-* `--ud_motion`: Apply up and down motion blur.
-* `--random_offset`: Randomly add offset.
+* Base argument
+    * `--output_dir`: Path of output directory.
+    * `--num_per_word`: Number of images per word.
+    * `--output_image_size`: Size of output image.
+    * `--bg_path`: The generated text pictures will use the pictures of this folder as the background.
+    * `--fonts_path`: The font used to generate the picture.
+    * `--chars_file`: Chars allowed to be appear in generated images.
+    * `--word_false_txt_path`: Txt file generated from check_font_validate.py.
+* Argument for choice best color
+    * `--color_path`: Color font library used to generate text.
+    * `--customize_color`: Support font custom color.
+* Argument for data augmentation
+    * `--blur`: Apply gauss blur to the generated image.
+    * `--prydown`: Blurred image, simulating the effect of enlargement of small pictures.
+    * `--lr_motion`: Apply left and right motion blur.
+    * `--ud_motion`: Apply up and down motion blur.
+    * `--config_file`: Set the parameters when rendering image.
 
-
-# About font files
-I sorted out about 700 fonts that can be used in generating OCR text pictures,
+# About font files 
+In zcswdt/Color_OCR_image_generator, he sorted out about 700 fonts that can be used in generating OCR text pictures,
 Downloaded Baidu Cloud Link as follows:<br>
  [here1](https://pan.baidu.com/s/1dRp70rEVeauu9rWB7bfGZw). Extraction code:8kzt.   [here2](https://pan.baidu.com/s/1aHkYSxactHm4u5eEiqHDAA). Extraction code:s58p
 
 ![example1.jpg](./demo_image/ziti.png)
 
-
 # Tools
-You can use `sentence_filter.py` script to select different modes(contains `filter` and `split` model) to 
+* You can use `sentence_filter.py` script to select different modes(contains `filter` and `split` model) to 
 filter the text and remove the text that is not in the dictionary and to cut the text of different lengths.
 
+* You can use `check_font_validate.py` to check whether it wasn't written the word on the image because of the font 
+and then create the txt file to list the font with the words not matching .
 
 # Reference
 - https://github.com/Sanster/text_renderer
