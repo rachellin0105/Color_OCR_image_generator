@@ -1,19 +1,14 @@
-# Color_OCR_image_generator
+# Single_char_image_generator
 This code is used to generate some synthesized text pictures with RGB channels to train the text recognition model.
 (e.g. [deep-text-recognition](https://github.com/clovaai/deep-text-recognition-benchmark)).
 And the length and width of the generated picture is indefinite and the number of words on the picture is also variable.
 
 # Getting Started
 ### Dependency
-- This work was tested with python 3.7,and Ubuntu 18.03. You may need to install the following libraries. <br>
-* `numpy`
-* `pickle`
-* `PIL(pillow)`
-* `sklearn`
-* `matplotlib`
-* `hashlib`
-* `fontTools`
-* `cv2(opencv)`
+- This work was tested with python 3.6,and Ubuntu 18.03. You may need to install third-party libraries by follewing commend. <br>
+'''bash
+ python -m pip install -r requirements.txt
+'''
 
 
 # Examples of generating images
