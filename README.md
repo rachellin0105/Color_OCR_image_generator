@@ -7,7 +7,7 @@ This code is used to generate some synthesized text pictures with RGB channels a
  python -m pip install -r requirements.txt
 ```
 # Generating images
-By default, simply run `python OCR_image_generator_single_ch.py` will generate a text images per word with color channels in `output/` and a labels.txt file in current floder.<br>
+By default, simply run `python OCR_image_generator_single_ch.py` will generate a text image per word with color channels in `output/` and a labels.txt file in current folder.<br>
 ```bash
 python OCR_image_generator_single_ch.py
 ```
