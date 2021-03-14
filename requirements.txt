@@ -1,0 +1,12 @@
+opencv-python
+pillow
+scikit-learn
+PyYAML
+easydict
+matplotlib
+tqdm
+fontTools
+
+
+
+

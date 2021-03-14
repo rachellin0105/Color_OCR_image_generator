@@ -1,17 +1,14 @@
 # coding=utf-8
-from types import FunctionType
-import PIL
 import os
-import sys
 import cv2
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
-import time
 import argparse
-
+from tqdm import tqdm
     
 '''
-
+Check whether it wasn't written the word on the image because of the font 
+and then create the txt file to list the font with the words not matching 
 '''
 
 def not_all_white_pixels(image):
@@ -28,7 +25,7 @@ def not_all_white_pixels(image):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input_dic',type=str,default='dic_ch.txt',help="input dictionary txt")
+    parser.add_argument('--input_dic',type=str,default='chars.txt',help="input dictionary txt")
     parser.add_argument('--font_dir',type=str,default='./fonts/chinse_jian',help="dir of font")
     parser.add_argument('--output_txt',type=str,default='wrong_dic.txt',help="output txt of wrong words")
     arg = parser.parse_args()
@@ -39,7 +36,7 @@ if __name__ == '__main__':
 
     with open( arg.input_dic,'r',encoding="utf8" ) as f:
         words = f.readlines()
-        for font in font_list:
+        for font in tqdm(font_list):
             for word in words:
                 word = word.replace('\n','')
                 font_path = os.path.join(arg.font_dir,font)
@@ -59,9 +56,11 @@ if __name__ == '__main__':
                         wrong_dic[font] = [word]
 
     print("Finished checking")
-    with open( arg.output_txt,'w',encoding="utf8" ) as f:
-        for key,value in wrong_dic.items():           
-            # 最好是可以用tab 區分 但我generater 懶得改了
-            f.write(key+' '+' '.join(value)+'\n')
+    if not wrong_dic:
+        print("All words match with font")
+    else:
+        with open( arg.output_txt,'w',encoding="utf8" ) as f:
+            for font,words in wrong_dic.items():           
+                f.write(key+'\t'+' '.join(value)+'\n')
 
-    print("Finished generating wrong words txt")
+        print("Finished generating wrong words txt")

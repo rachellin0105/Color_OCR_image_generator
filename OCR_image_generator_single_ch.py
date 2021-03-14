@@ -6,9 +6,6 @@
  @file: Color_OCR_image_generator.py
  @time: 2020/06/24
 """
-from __future__ import unicode_literals
-from json import encoder
-from os.path import lexists
 import cv2
 import numpy as np
 import time
@@ -17,17 +14,14 @@ import random
 from PIL import Image,ImageDraw,ImageFont
 import os
 from sklearn.cluster import KMeans
-import matplotlib.pyplot as plt
-import json
+
 
 import argparse
-from collections import defaultdict
 
 from tools.config import load_config
 from noiser import Noiser
 from tools.utils import apply
 from math import ceil
-#  import math_utils
 import pickle
 from tqdm import tqdm
 import time
@@ -194,8 +188,9 @@ def init_wrong_dict(word_false_txt_path):
 		line = line.replace('\n','')
 		line = line.replace('.TTF','')
 		line = line.replace('.ttf','').strip()
-		line = line.split(' ')
-		wrong_dict[line[0]] = line[1:]
+		[font,words] = line.split('\t')
+		words = words.split(' ')
+		wrong_dict[font] = words
 
 	return wrong_dict
 
@@ -205,7 +200,7 @@ def get_word_list(word_txt_path):
 		assert False, "Chars file not exists."
 
 	voc_list = []
-	with open(word_txt_path,'r') as f:
+	with open(word_txt_path,'r',encoding="utf8") as f:
 		lines = f.readlines()
 		voc_list = [line.replace('\n','')for line in lines]
 	return voc_list
@@ -220,18 +215,16 @@ if __name__ == '__main__':
 
 	parser.add_argument('--output_image_size', type=int, default=64, help="Number of images to generate")
 
-	parser.add_argument('--length',type=int,default=1,help='word length') # 目前用步道
-	
-	parser.add_argument('--bg_path', type=str, default='./background_not_real',
+	parser.add_argument('--bg_path', type=str, default='./background',
 						help='The generated text pictures will use the pictures of this folder as the background')
 						
-	parser.add_argument('--fonts_path',type=str, default='./fonts/all_font',
+	parser.add_argument('--fonts_path',type=str, default='./fonts/chinse_jian',
 						help='The font used to generate the picture')
 
-	parser.add_argument('--chars_file',  type=str, default='new_chars.txt',
+	parser.add_argument('--chars_file',  type=str, default='chars.txt',
 						help='Chars allowed to be appear in generated images')
 
-	parser.add_argument('--word_false_txt_path',  type=str, default='./all_char_wrong_dic.txt',
+	parser.add_argument('--word_false_txt_path',  type=str, default='./wrong_dic.txt',
 						help='txt file generated from check_font_validate.py')
 
 	# argument for choice best color
