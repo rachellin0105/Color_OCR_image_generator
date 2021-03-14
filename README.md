@@ -74,5 +74,6 @@ and then create the txt file to list the font with the words not matching .
 # Reference
 - https://github.com/Sanster/text_renderer
 - https://github.com/wang-tf/Chinese_OCR_synthetic_data
+- https://github.com/zcswdt/Color_OCR_image_generator
 
 
