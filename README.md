@@ -9,7 +9,6 @@ This code is used to generate some synthesized text pictures with RGB channels a
 ```
 # Examples of generating images
 By default, simply run `python OCR_image_generator_single_ch.py` will generate a text images per word with color channels in `output/` and a labels.txt file in current floder.<br>
-## single_text_image<br>
 ![example1.jpg](./demo_img/1.jpg)
 ![example2.jpg](./demo_img/2.jpg)
 ![example3.jpg](./demo_img/3.jpg)
@@ -24,7 +23,7 @@ Run `python3 OCR_image_generator.py ` will generate the following images<br>
 | `--prydown`|<img src="./demo_img/prydown.jpg" width="64" height="64" >      
 | `--lr_motion`| <img src="./demo_img/lr_motion.jpg" width="64" height="64" >  | 
 | `--ud_motion`| <img src="./demo_img/ud_motion.jpg" width="64" height="64" >      |
-|`noise_enable` | <img src="./demo_img/noise.jpg"width="64" height="64" >    | 
+|`noise_enable` | <img src="./demo_img/noise.jpg" width="64" height="64" >    | 
 
 ## About the choice of font color
 In this paper, the kmeans clustering method is used to calculate the 8 cluster centers in the LAB space 
@@ -39,7 +38,8 @@ Of course, if you know in advance what kind of font color you need, you need to 
 you can also use `--customize_color` parameters to customize the font color.
 
 ## Arguments
-* `--num_img`: Number of images to generate.
+* base argument
+- `--num_img`: Number of images to generate.
 * `--font_min_size`: Can help adjust the size of the generated text and the size of the picture.
 * `--font_max_size`: Can help adjust the size of the generated text and the size of the picture.
 * `--bg_path`: The generated text pictures will use the pictures of this folder as the background.
