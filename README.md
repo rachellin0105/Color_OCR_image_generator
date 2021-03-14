@@ -2,7 +2,7 @@
 This code is used to generate some synthesized text pictures with RGB channels and **perspective transform** by default to train the text classification model.
 
 # Getting Started
-- This work was tested with python 3.6,and Ubuntu 18.03. You may need to install third-party libraries by follewing commend. <br>
+- This work was tested with python 3.6,and Ubuntu 18.03. You may need to install third-party libraries by following commend. <br>
 ```bash
  python -m pip install -r requirements.txt
 ```
