@@ -24,7 +24,7 @@ Adding different parameters can generate text images with different effects, as 
 | `--prydown`|<img src="./demo_img/prydown.jpg" width="64" height="64" >      
 | `--lr_motion`| <img src="./demo_img/lr_motion.jpg" width="64" height="64" >  | 
 | `--ud_motion`| <img src="./demo_img/ud_motion.jpg" width="64" height="64" >      |
-|`noise_enable` | <img src="./demo_img/noise.jpg" width="64" height="64" >    | 
+| `--noise_enable` | <img src="./demo_img/noise.jpg" width="64" height="64" >    | 
 
 # About the choice of font color
 In this paper, the kmeans clustering method is used to calculate the 8 cluster centers in the LAB space 
