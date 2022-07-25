@@ -27,7 +27,7 @@ Adding different parameters can generate text images with different effects, as 
 | `--noise_enable` | <img src="./demo_img/noise.jpg" width="64" height="64" >    | 
 
 # About the choice of font color
-In this paper, the kmeans clustering method is used to calculate the 8 cluster centers in the LAB space 
+In this project, the kmeans clustering method is used to calculate the 8 cluster centers in the LAB space 
 based on the background image clipped by the selected text, and then load the color library (including 9882 colors), 
 and randomly select No. 500 from the color library. 
 
